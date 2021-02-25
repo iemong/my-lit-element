@@ -1,11 +1,7 @@
 import { LitElement, html, customElement, property, css } from 'lit-element'
 
-/**
- * An example element.
- *
- * @slot - This element has a slot
- * @csspart button - The button
- */
+import './my-input'
+
 @customElement('my-element')
 export class MyElement extends LitElement {
   static styles = css`
@@ -35,7 +31,7 @@ export class MyElement extends LitElement {
       <button @click=${this._onClick} part="button">
         Click Count: ${this.count}
       </button>
-      <slot></slot>
+      <my-input/>
     `
   }
 
