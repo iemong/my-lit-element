@@ -1,7 +1,5 @@
 import { LitElement, html, customElement, property, css } from 'lit-element'
 
-import './my-input'
-
 @customElement('my-element')
 export class MyElement extends LitElement {
   static styles = css`
@@ -31,7 +29,7 @@ export class MyElement extends LitElement {
       <button @click=${this._onClick} part="button">
         Click Count: ${this.count}
       </button>
-      <my-input/>
+      <slot></slot>
     `
   }
 
